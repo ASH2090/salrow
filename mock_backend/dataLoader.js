@@ -12,13 +12,13 @@ function loadJSON(filename) {
     const raw = fs.readFileSync(filePath, "utf8");
 
     if (!raw.trim()) {
-      console.warn(`⚠ ${filename} is empty — returning []`);
+      console.warn(` ${filename} is empty — returning []`);
       return [];
     }
 
     return JSON.parse(raw);
   } catch (err) {
-    console.error(`❌ Failed to load ${filename}: ${err.message}`);
+    console.error(` Failed to load ${filename}: ${err.message}`);
     return [];
   }
 }

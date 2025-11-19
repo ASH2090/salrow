@@ -8,9 +8,9 @@ app.use(cors());
 app.use(express.json());
 
 // Load mock data
-console.log("🧹 Loading mock data...");
+console.log(" Loading mock data...");
 const { routePoints, alertsData } = loadData();
-console.log("✅ Mock data loaded.");
+console.log(" Mock data loaded.");
 
 // Health check
 app.get("/", (req, res) => {
