@@ -1,0 +1,90 @@
+{
+    "users": {
+      "user_001": { "email": "admin1@example.com", "role": "admin", "created_at": "2025-10-10T09:00:00Z" },
+      "user_002": { "email": "admin2@example.com", "role": "admin", "created_at": "2025-10-10T09:05:00Z" },
+      "user_003": { "email": "driver1@example.com", "role": "driver", "created_at": "2025-10-10T09:10:00Z" },
+      "user_004": { "email": "driver2@example.com", "role": "driver", "created_at": "2025-10-10T09:15:00Z" },
+      "user_005": { "email": "driver3@example.com", "role": "driver", "created_at": "2025-10-10T09:20:00Z" },
+      "user_006": { "email": "driver4@example.com", "role": "driver", "created_at": "2025-10-10T09:25:00Z" },
+      "user_007": { "email": "driver5@example.com", "role": "driver", "created_at": "2025-10-10T09:30:00Z" },
+      "user_008": { "email": "dispatcher1@example.com", "role": "dispatcher", "created_at": "2025-10-10T09:35:00Z" },
+      "user_009": { "email": "dispatcher2@example.com", "role": "dispatcher", "created_at": "2025-10-10T09:40:00Z" },
+      "user_010": { "email": "dispatcher3@example.com", "role": "dispatcher", "created_at": "2025-10-10T09:45:00Z" },
+      "user_011": { "email": "manager1@example.com", "role": "manager", "created_at": "2025-10-10T09:50:00Z" },
+      "user_012": { "email": "manager2@example.com", "role": "manager", "created_at": "2025-10-10T09:55:00Z" },
+      "user_013": { "email": "operator1@example.com", "role": "operator", "created_at": "2025-10-10T10:00:00Z" },
+      "user_014": { "email": "operator2@example.com", "role": "operator", "created_at": "2025-10-10T10:05:00Z" },
+      "user_015": { "email": "operator3@example.com", "role": "operator", "created_at": "2025-10-10T10:10:00Z" }
+    },
+    "devices": {
+      "device_001": { "user_id": "user_001", "platform": "ios", "push_token": "ios_001", "last_seen": "2025-10-10T10:15:00Z" },
+      "device_002": { "user_id": "user_002", "platform": "ios", "push_token": "ios_002", "last_seen": "2025-10-10T10:16:00Z" },
+      "device_003": { "user_id": "user_003", "platform": "android", "push_token": "and_003", "last_seen": "2025-10-10T10:17:00Z" },
+      "device_004": { "user_id": "user_004", "platform": "android", "push_token": "and_004", "last_seen": "2025-10-10T10:18:00Z" },
+      "device_005": { "user_id": "user_005", "platform": "ios", "push_token": "ios_005", "last_seen": "2025-10-10T10:19:00Z" },
+      "device_006": { "user_id": "user_006", "platform": "android", "push_token": "and_006", "last_seen": "2025-10-10T10:20:00Z" },
+      "device_007": { "user_id": "user_007", "platform": "ios", "push_token": "ios_007", "last_seen": "2025-10-10T10:21:00Z" },
+      "device_008": { "user_id": "user_008", "platform": "android", "push_token": "and_008", "last_seen": "2025-10-10T10:22:00Z" },
+      "device_009": { "user_id": "user_009", "platform": "android", "push_token": "and_009", "last_seen": "2025-10-10T10:23:00Z" },
+      "device_010": { "user_id": "user_010", "platform": "ios", "push_token": "ios_010", "last_seen": "2025-10-10T10:24:00Z" },
+      "device_011": { "user_id": "user_011", "platform": "android", "push_token": "and_011", "last_seen": "2025-10-10T10:25:00Z" },
+      "device_012": { "user_id": "user_012", "platform": "ios", "push_token": "ios_012", "last_seen": "2025-10-10T10:26:00Z" },
+      "device_013": { "user_id": "user_013", "platform": "android", "push_token": "and_013", "last_seen": "2025-10-10T10:27:00Z" },
+      "device_014": { "user_id": "user_014", "platform": "android", "push_token": "and_014", "last_seen": "2025-10-10T10:28:00Z" },
+      "device_015": { "user_id": "user_015", "platform": "ios", "push_token": "ios_015", "last_seen": "2025-10-10T10:29:00Z" }
+    },
+    "vehicles": {
+      "vehicle_001": { "owner_user_id": "user_003", "type": "truck", "plate_number": "TRK-001", "agency": "LogiFlow" },
+      "vehicle_002": { "owner_user_id": "user_004", "type": "truck", "plate_number": "TRK-002", "agency": "MoveIt" },
+      "vehicle_003": { "owner_user_id": "user_005", "type": "ambulance", "plate_number": "AMB-003", "agency": "CityCare" },
+      "vehicle_004": { "owner_user_id": "user_006", "type": "truck", "plate_number": "TRK-004", "agency": "Transco" },
+      "vehicle_005": { "owner_user_id": "user_007", "type": "truck", "plate_number": "TRK-005", "agency": "FastLane" },
+      "vehicle_006": { "owner_user_id": "user_008", "type": "ambulance", "plate_number": "AMB-006", "agency": "CityCare" },
+      "vehicle_007": { "owner_user_id": "user_009", "type": "truck", "plate_number": "TRK-007", "agency": "CargoNow" },
+      "vehicle_008": { "owner_user_id": "user_010", "type": "ambulance", "plate_number": "AMB-008", "agency": "LifeAid" },
+      "vehicle_009": { "owner_user_id": "user_011", "type": "truck", "plate_number": "TRK-009", "agency": "FreightHub" },
+      "vehicle_010": { "owner_user_id": "user_012", "type": "ambulance", "plate_number": "AMB-010", "agency": "CityCare" },
+      "vehicle_011": { "owner_user_id": "user_013", "type": "truck", "plate_number": "TRK-011", "agency": "Transco" },
+      "vehicle_012": { "owner_user_id": "user_014", "type": "ambulance", "plate_number": "AMB-012", "agency": "LifeAid" },
+      "vehicle_013": { "owner_user_id": "user_015", "type": "truck", "plate_number": "TRK-013", "agency": "MoveIt" },
+      "vehicle_014": { "owner_user_id": "user_002", "type": "truck", "plate_number": "TRK-014", "agency": "FreightHub" },
+      "vehicle_015": { "owner_user_id": "user_001", "type": "ambulance", "plate_number": "AMB-015", "agency": "HealthRide" }
+    },
+    "routes": {
+      "route_001": { "vehicle_id": "vehicle_001", "polyline": [{ "_lat": 34.0, "_long": -118.0 }, { "_lat": 36.0, "_long": -115.0 }], "start_time": "2025-10-10T10:30:00Z", "status": "in_progress" },
+      "route_002": { "vehicle_id": "vehicle_002", "polyline": [{ "_lat": 35.0, "_long": -117.0 }, { "_lat": 37.0, "_long": -114.0 }], "start_time": "2025-10-10T10:31:00Z", "status": "scheduled" },
+      "route_003": { "vehicle_id": "vehicle_003", "polyline": [{ "_lat": 40.7, "_long": -74.0 }, { "_lat": 40.8, "_long": -73.9 }], "start_time": "2025-10-10T10:32:00Z", "status": "in_progress" },
+      "route_004": { "vehicle_id": "vehicle_004", "polyline": [{ "_lat": 33.0, "_long": -112.0 }, { "_lat": 34.0, "_long": -111.0 }], "start_time": "2025-10-10T10:33:00Z", "status": "completed" },
+      "route_005": { "vehicle_id": "vehicle_005", "polyline": [{ "_lat": 39.0, "_long": -120.0 }, { "_lat": 40.0, "_long": -118.0 }], "start_time": "2025-10-10T10:34:00Z", "status": "in_progress" },
+      "route_006": { "vehicle_id": "vehicle_006", "polyline": [{ "_lat": 41.0, "_long": -87.0 }, { "_lat": 42.0, "_long": -86.0 }], "start_time": "2025-10-10T10:35:00Z", "status": "scheduled" },
+      "route_007": { "vehicle_id": "vehicle_007", "polyline": [{ "_lat": 32.7, "_long": -97.3 }, { "_lat": 33.7, "_long": -96.8 }], "start_time": "2025-10-10T10:36:00Z", "status": "completed" },
+      "route_008": { "vehicle_id": "vehicle_008", "polyline": [{ "_lat": 29.7, "_long": -95.3 }, { "_lat": 30.0, "_long": -94.8 }], "start_time": "2025-10-10T10:37:00Z", "status": "in_progress" },
+      "route_009": { "vehicle_id": "vehicle_009", "polyline": [{ "_lat": 38.9, "_long": -77.0 }, { "_lat": 39.0, "_long": -76.9 }], "start_time": "2025-10-10T10:38:00Z", "status": "scheduled" },
+      "route_010": { "vehicle_id": "vehicle_010", "polyline": [{ "_lat": 47.6, "_long": -122.3 }, { "_lat": 47.7, "_long": -122.2 }], "start_time": "2025-10-10T10:39:00Z", "status": "completed" },
+      "route_011": { "vehicle_id": "vehicle_011", "polyline": [{ "_lat": 34.0, "_long": -118.5 }, { "_lat": 36.0, "_long": -115.1 }], "start_time": "2025-10-10T10:40:00Z", "status": "in_progress" },
+      "route_012": { "vehicle_id": "vehicle_012", "polyline": [{ "_lat": 40.0, "_long": -75.0 }, { "_lat": 41.0, "_long": -74.5 }], "start_time": "2025-10-10T10:41:00Z", "status": "in_progress" },
+      "route_013": { "vehicle_id": "vehicle_013", "polyline": [{ "_lat": 42.0, "_long": -83.0 }, { "_lat": 43.0, "_long": -82.5 }], "start_time": "2025-10-10T10:42:00Z", "status": "scheduled" },
+      "route_014": { "vehicle_id": "vehicle_014", "polyline": [{ "_lat": 45.0, "_long": -93.0 }, { "_lat": 46.0, "_long": -92.5 }], "start_time": "2025-10-10T10:43:00Z", "status": "completed" },
+      "route_015": { "vehicle_id": "vehicle_015", "polyline": [{ "_lat": 48.0, "_long": -122.0 }, { "_lat": 49.0, "_long": -121.5 }], "start_time": "2025-10-10T10:44:00Z", "status": "in_progress" }
+      
+    },
+    "positions": {
+      "route_001": {
+        "position_001": { "point": { "_lat": 34.1, "_long": -118.1 }, "speed": 65, "heading": 40, "ts": "2025-10-10T10:45:00Z" }
+      },
+      "route_002": {
+        "position_001": { "point": { "_lat": 35.1, "_long": -117.1 }, "speed": 55, "heading": 60, "ts": "2025-10-10T10:46:00Z" }
+      },
+      "route_003": {
+        "position_001": { "point": { "_lat": 40.75, "_long": -73.95 }, "speed": 58, "heading": 75, "ts": "2025-10-10T10:47:00Z" }
+      }
+    },
+    "geofences": {
+      "geofence_001": { "route_id": "route_001", "polygon": [{ "_lat": 34.0, "_long": -118.0 }, { "_lat": 34.1, "_long": -118.0 }, { "_lat": 34.1, "_long": -118.1 }, { "_lat": 34.0, "_long": -118.1 }], "buffer_meters": 500, "expires_at": "2025-10-11T10:00:00Z" },
+      "geofence_002": { "route_id": "route_002", "polygon": [{ "_lat": 35.0, "_long": -117.0 }, { "_lat": 35.1, "_long": -117.0 }, { "_lat": 35.1, "_long": -117.1 }, { "_lat": 35.0, "_long": -117.1 }], "buffer_meters": 500, "expires_at": "2025-10-11T10:00:00Z" },
+      "geofence_003": { "route_id": "route_003", "polygon": [{ "_lat": 40.7, "_long": -74.0 }, { "_lat": 40.8, "_long": -74.0 }, { "_lat": 40.8, "_long": -74.1 }, { "_lat": 40.7, "_long": -74.1 }], "buffer_meters": 500, "expires_at": "2025-10-11T10:00:00Z" },
+      "geofence_004": { "route_id": "route_004", "polygon": [{ "_lat": 33.0, "_long": -112.0 }, { "_lat": 33.1, "_long": -112.0 }, { "_lat": 33.1, "_long": -112.1 }, { "_lat": 33.0, "_long": -112.1 }], "buffer_meters": 500, "expires_at": "2025-10-11T10:00:00Z" },
+      "geofence_005": { "route_id": "route_005", "polygon": [{ "_lat": 39.0, "_long": -120.0 }, { "_lat": 39.1, "_long": -120.0 }, { "_lat": 39.1, "_long": -120.1 }, { "_lat": 39.0, "_long": -120.1 }], "buffer_meters": 500, "expires_at": "2025-10-11T10:00:00Z" }
+    }
+    
+}

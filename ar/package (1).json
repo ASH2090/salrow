@@ -1,0 +1,16 @@
+{
+  "name": "fcm-demo",
+  "version": "1.0.0",
+  "description": "A simple server for the FCM demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@googlemaps/google-maps-services-js": "^3.4.2",
+    "dotenv": "^17.2.3",
+    "express": "^4.18.2",
+    "firebase-admin": "^12.0.0",
+    "csv-parser": "^3.0.0"
+  }
+}

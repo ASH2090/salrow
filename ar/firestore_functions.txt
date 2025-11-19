@@ -1,0 +1,182 @@
+📘 FIRESTORE ADMIN SDK REFERENCE SHEET (Node.js)
+
+───────────────────────────────────────────────
+1️⃣ INITIALIZATION
+───────────────────────────────────────────────
+const admin = require("firebase-admin");
+const serviceAccount = require("./serviceAccountKey.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
+});
+
+const db = admin.firestore();
+
+───────────────────────────────────────────────
+2️⃣ ADDING & WRITING DATA
+───────────────────────────────────────────────
+
+// (a) Set document (create or overwrite)
+await db.collection('cities').doc('LA').set({
+  name: 'Los Angeles',
+  state: 'CA',
+  country: 'USA'
+});
+
+// (b) Add document with auto-ID
+const res = await db.collection('cities').add({
+  name: 'Tokyo',
+  country: 'Japan'
+});
+console.log('Added document with ID:', res.id);
+
+// (c) Set with merge (update or create)
+await db.collection('cities').doc('CHI').set({
+  capital: true
+}, { merge: true });
+
+───────────────────────────────────────────────
+3️⃣ READING DATA
+───────────────────────────────────────────────
+
+// (a) Get single document
+const doc = await db.collection('cities').doc('LA').get();
+if (doc.exists) console.log(doc.data());
+
+// (b) Get all documents in collection
+const snapshot = await db.collection('cities').get();
+snapshot.forEach(doc => console.log(doc.id, '=>', doc.data()));
+
+// (c) Get subcollection
+const subSnap = await db.collection('cities').doc('LA').collection('landmarks').get();
+
+───────────────────────────────────────────────
+4️⃣ UPDATING DATA
+───────────────────────────────────────────────
+
+// (a) Update fields
+await db.collection('cities').doc('LA').update({ capital: false });
+
+// (b) Add a new field
+await db.collection('cities').doc('LA').update({ population: 3900000 });
+
+// (c) Update timestamp
+const { FieldValue } = require('firebase-admin/firestore');
+await db.collection('cities').doc('LA').update({
+  updatedAt: FieldValue.serverTimestamp()
+});
+
+───────────────────────────────────────────────
+5️⃣ DELETING DATA
+───────────────────────────────────────────────
+
+// (a) Delete document
+await db.collection('cities').doc('CHI').delete();
+
+// (b) Delete field
+await db.collection('cities').doc('LA').update({
+  capital: FieldValue.delete()
+});
+
+───────────────────────────────────────────────
+6️⃣ QUERYING DATA
+───────────────────────────────────────────────
+
+// (a) Simple where
+const snapshot = await db.collection('cities').where('state', '==', 'CA').get();
+
+// (b) Chained where (AND)
+const snapshot = await db.collection('cities')
+  .where('country', '==', 'Japan')
+  .where('capital', '==', true)
+  .get();
+
+// (c) Ordering and limiting
+const snapshot = await db.collection('cities')
+  .orderBy('population', 'desc')
+  .limit(3)
+  .get();
+
+// (d) Pagination
+const firstBatch = await db.collection('cities').orderBy('population').limit(10).get();
+const lastDoc = firstBatch.docs[firstBatch.docs.length - 1];
+const nextBatch = await db.collection('cities')
+  .orderBy('population')
+  .startAfter(lastDoc)
+  .limit(10)
+  .get();
+
+───────────────────────────────────────────────
+7️⃣ BATCHED WRITES
+───────────────────────────────────────────────
+const batch = db.batch();
+
+const laRef = db.collection('cities').doc('LA');
+batch.set(laRef, { name: 'Los Angeles' });
+
+const sfRef = db.collection('cities').doc('SF');
+batch.update(sfRef, { population: 1000000 });
+
+const chiRef = db.collection('cities').doc('CHI');
+batch.delete(chiRef);
+
+await batch.commit();
+
+───────────────────────────────────────────────
+8️⃣ TRANSACTIONS
+───────────────────────────────────────────────
+await db.runTransaction(async (t) => {
+  const cityRef = db.collection('cities').doc('LA');
+  const doc = await t.get(cityRef);
+
+  if (!doc.exists) throw "Document does not exist";
+
+  const newPop = doc.data().population + 100000;
+  t.update(cityRef, { population: newPop });
+});
+
+───────────────────────────────────────────────
+9️⃣ UTILITIES & METADATA
+───────────────────────────────────────────────
+
+// (a) Server timestamps
+await db.collection('logs').add({
+  event: 'UserLogin',
+  ts: FieldValue.serverTimestamp()
+});
+
+// (b) Increment numeric field
+await db.collection('cities').doc('LA').update({
+  visits: FieldValue.increment(1)
+});
+
+// (c) Array operations
+await db.collection('cities').doc('LA').update({
+  tags: FieldValue.arrayUnion('new_tag')
+});
+
+───────────────────────────────────────────────
+🔟 GEOPOINT & TIMESTAMP EXAMPLES
+───────────────────────────────────────────────
+const { GeoPoint, Timestamp } = require('firebase-admin/firestore');
+await db.collection('locations').add({
+  point: new GeoPoint(37.7749, -122.4194),
+  createdAt: Timestamp.now()
+});
+
+───────────────────────────────────────────────
+1️⃣1️⃣ REALTIME LISTENERS (SNAPSHOTS)
+───────────────────────────────────────────────
+// Listen to real-time updates in a collection
+db.collection('cities').onSnapshot(snapshot => {
+  snapshot.docChanges().forEach(change => {
+    if (change.type === 'added') console.log('New city:', change.doc.data());
+    if (change.type === 'modified') console.log('Modified city:', change.doc.data());
+    if (change.type === 'removed') console.log('Removed city:', change.doc.data());
+  });
+});
+
+// Listen to a single document
+db.collection('cities').doc('LA').onSnapshot(doc => {
+  console.log('Current data:', doc.data());
+});

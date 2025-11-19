@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Live Route on Google Maps</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    /* Style for the button container */
+    #fcm-button-container {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 5;
+      background: white;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="fcm-button-container">
+    <!-- The onclick attribute has been removed and an ID has been added -->
+    <button id="fcm-button">Allow Notifications</button>
+  </div>
+  <div id="map"></div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-messaging.js"></script>
+
+  <!-- Your custom scripts -->
+  <script src="11.maps.js"></script>
+  <script src="13.fcm_client_setup.js"></script>
+
+  <!-- 
+    Load Maps API with the new key, async loading, and a callback.
+  -->
+  <script
+    async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJJ5_REU2kwTxn5IyZRKiJpuGQvj7pXI0&v=weekly&callback=initMap&loading=async">
+  </script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_606644a80303c938deb5773d97b84d22 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_606644a80303c938deb5773d97b84d22" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_606644a80303c938deb5773d97b84d22 = L.map(
+                "map_606644a80303c938deb5773d97b84d22",
+                {
+                    center: [41.9255, -87.6488],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f3a8d455b583c4b07160b19d3a4262a4 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_f3a8d455b583c4b07160b19d3a4262a4.addTo(map_606644a80303c938deb5773d97b84d22);
+        
+    
+            var poly_line_3ea91cfed035769e543312f0d1d34abc = L.polyline(
+                [[41.750885, -87.759132], [41.938242, -87.653913]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_606644a80303c938deb5773d97b84d22);
+        
+    
+            poly_line_3ea91cfed035769e543312f0d1d34abc.bindTooltip(
+                `<div>
+                     To: Advocate Illinois Masonic<br>Calls: 46
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a2c1d7267fc8b172ec49b98017d2b51a = L.circleMarker(
+                [41.938242, -87.653913],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.0, "stroke": true, "weight": 3}
+            ).addTo(map_606644a80303c938deb5773d97b84d22);
+        
+    
+            circle_marker_a2c1d7267fc8b172ec49b98017d2b51a.bindTooltip(
+                `<div>
+                     Advocate Illinois Masonic<br>Total Calls: 46
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_59991d5f34ac6ddbc998a0ea162a0453 = L.polyline(
+                [[41.944569, -87.853118], [41.777816, -87.697524]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_606644a80303c938deb5773d97b84d22);
+        
+    
+            poly_line_59991d5f34ac6ddbc998a0ea162a0453.bindTooltip(
+                `<div>
+                     To: Holy Cross Hospital<br>Calls: 53
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_01e6859dddfef1fe82bfc9245d512e94 = L.circleMarker(
+                [41.777816, -87.697524],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 26.5, "stroke": true, "weight": 3}
+            ).addTo(map_606644a80303c938deb5773d97b84d22);
+        
+    
+            circle_marker_01e6859dddfef1fe82bfc9245d512e94.bindTooltip(
+                `<div>
+                     Holy Cross Hospital<br>Total Calls: 53
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_63cb9bef6f614c73e9d5b96f81c91722 = L.polyline(
+                [[41.917613, -87.613679], [41.860835, -87.715703]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_606644a80303c938deb5773d97b84d22);
+        
+    
+            poly_line_63cb9bef6f614c73e9d5b96f81c91722.bindTooltip(
+                `<div>
+                     To: Mount Sinai Hospital<br>Calls: 52
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_15131383f0fc796f706a16ecbe03ae26 = L.circleMarker(
+                [41.860835, -87.715703],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 26.0, "stroke": true, "weight": 3}
+            ).addTo(map_606644a80303c938deb5773d97b84d22);
+        
+    
+            circle_marker_15131383f0fc796f706a16ecbe03ae26.bindTooltip(
+                `<div>
+                     Mount Sinai Hospital<br>Total Calls: 52
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_811f4445cb0c39f4583d2a028964e02a = L.polyline(
+                [[41.787309, -87.61293], [41.893456, -87.619889]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_606644a80303c938deb5773d97b84d22);
+        
+    
+            poly_line_811f4445cb0c39f4583d2a028964e02a.bindTooltip(
+                `<div>
+                     To: Northwestern Memorial Hospital<br>Calls: 55
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_187a92b9ccfdfab17715d3535bddf119 = L.circleMarker(
+                [41.893456, -87.619889],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 27.5, "stroke": true, "weight": 3}
+            ).addTo(map_606644a80303c938deb5773d97b84d22);
+        
+    
+            circle_marker_187a92b9ccfdfab17715d3535bddf119.bindTooltip(
+                `<div>
+                     Northwestern Memorial Hospital<br>Total Calls: 55
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_5ae8984eb3aad5e162597f7b869dc03a = L.polyline(
+                [[41.958631, -87.572573], [41.901888, -87.703681]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_606644a80303c938deb5773d97b84d22);
+        
+    
+            poly_line_5ae8984eb3aad5e162597f7b869dc03a.bindTooltip(
+                `<div>
+                     To: Norwegian American Hospital (Humboldt Park)<br>Calls: 44
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b295ed3e36c28f79e4c8879dfa1cd102 = L.circleMarker(
+                [41.901888, -87.703681],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.0, "stroke": true, "weight": 3}
+            ).addTo(map_606644a80303c938deb5773d97b84d22);
+        
+    
+            circle_marker_b295ed3e36c28f79e4c8879dfa1cd102.bindTooltip(
+                `<div>
+                     Norwegian American Hospital (Humboldt Park)<br>Total Calls: 44
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_46fe6799c910e8e5d5b4bc992af28d1b = L.polyline(
+                [[41.642506, -87.632544], [41.873419, -87.676525]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_606644a80303c938deb5773d97b84d22);
+        
+    
+            poly_line_46fe6799c910e8e5d5b4bc992af28d1b.bindTooltip(
+                `<div>
+                     To: Rush University Medical Center<br>Calls: 41
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a8175da68ef02244f21f9444c24264b7 = L.circleMarker(
+                [41.873419, -87.676525],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.5, "stroke": true, "weight": 3}
+            ).addTo(map_606644a80303c938deb5773d97b84d22);
+        
+    
+            circle_marker_a8175da68ef02244f21f9444c24264b7.bindTooltip(
+                `<div>
+                     Rush University Medical Center<br>Total Calls: 41
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_c4052f7849f08bb615c27f70f70a914a = L.polyline(
+                [[42.01907, -87.769598], [41.9014, -87.683053]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_606644a80303c938deb5773d97b84d22);
+        
+    
+            poly_line_c4052f7849f08bb615c27f70f70a914a.bindTooltip(
+                `<div>
+                     To: Saints Mary and Elizabeth<br>Calls: 52
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_05da3fbc02f5389400947f405f5edc16 = L.circleMarker(
+                [41.9014, -87.683053],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 26.0, "stroke": true, "weight": 3}
+            ).addTo(map_606644a80303c938deb5773d97b84d22);
+        
+    
+            circle_marker_05da3fbc02f5389400947f405f5edc16.bindTooltip(
+                `<div>
+                     Saints Mary and Elizabeth<br>Total Calls: 52
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_d150336729ce9c23b79115980b010300 = L.polyline(
+                [[41.813409, -87.931176], [41.777466, -87.641006]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_606644a80303c938deb5773d97b84d22);
+        
+    
+            poly_line_d150336729ce9c23b79115980b010300.bindTooltip(
+                `<div>
+                     To: St. Bernard Hospital<br>Calls: 49
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_066de0d8ceb0e7986be332419ecd7563 = L.circleMarker(
+                [41.777466, -87.641006],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 24.5, "stroke": true, "weight": 3}
+            ).addTo(map_606644a80303c938deb5773d97b84d22);
+        
+    
+            circle_marker_066de0d8ceb0e7986be332419ecd7563.bindTooltip(
+                `<div>
+                     St. Bernard Hospital<br>Total Calls: 49
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_db3acc1eb1972d03a4ed3d51f1636b64 = L.polyline(
+                [[41.853166, -87.64529], [41.873579, -87.673233]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_606644a80303c938deb5773d97b84d22);
+        
+    
+            poly_line_db3acc1eb1972d03a4ed3d51f1636b64.bindTooltip(
+                `<div>
+                     To: UIC Hospital<br>Calls: 55
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_372815e19c0ffb1dbe10b952330b73af = L.circleMarker(
+                [41.873579, -87.673233],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 27.5, "stroke": true, "weight": 3}
+            ).addTo(map_606644a80303c938deb5773d97b84d22);
+        
+    
+            circle_marker_372815e19c0ffb1dbe10b952330b73af.bindTooltip(
+                `<div>
+                     UIC Hospital<br>Total Calls: 55
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_24830aee513f5503510fac4eceb6c3ce = L.polyline(
+                [[41.872887, -87.705891], [41.789005, -87.604235]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_606644a80303c938deb5773d97b84d22);
+        
+    
+            poly_line_24830aee513f5503510fac4eceb6c3ce.bindTooltip(
+                `<div>
+                     To: University of Chicago Medical Center<br>Calls: 53
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_506617231c860c2540f38a2044fe2804 = L.circleMarker(
+                [41.789005, -87.604235],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 26.5, "stroke": true, "weight": 3}
+            ).addTo(map_606644a80303c938deb5773d97b84d22);
+        
+    
+            circle_marker_506617231c860c2540f38a2044fe2804.bindTooltip(
+                `<div>
+                     University of Chicago Medical Center<br>Total Calls: 53
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>

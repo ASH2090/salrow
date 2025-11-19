@@ -1,0 +1,14 @@
+[debug] [2025-11-06T01:41:15.950Z] ----------------------------------------------------------------------
+[debug] [2025-11-06T01:41:15.954Z] Command:       /nix/store/ws50yvm6vzlzf7jzz6n7xh4szddrack1-nodejs-20.19.1/bin/node /nix/store/f77kilzcw5hh2gidh22k6pj8cp7pxp7h-firebase-tools-14.22.0/lib/node_modules/firebase-tools/lib/bin/firebase.js firestore:delete accidents --all-collections
+[debug] [2025-11-06T01:41:15.955Z] CLI Version:   14.22.0
+[debug] [2025-11-06T01:41:15.955Z] Platform:      linux
+[debug] [2025-11-06T01:41:15.956Z] Node Version:  v20.19.1
+[debug] [2025-11-06T01:41:15.956Z] Time:          Thu Nov 06 2025 01:41:15 GMT+0000 (Coordinated Universal Time)
+[debug] [2025-11-06T01:41:15.956Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-11-06T01:41:15.960Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2025-11-06T01:41:16.057Z] No OAuth tokens found
+[debug] [2025-11-06T01:41:16.058Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[debug] [2025-11-06T01:41:17.200Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2025-11-06T01:41:17.201Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
