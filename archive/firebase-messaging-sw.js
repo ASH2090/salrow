@@ -7,7 +7,7 @@ importScripts('https://www.gstatic.com/firebasejs/8.10.1/firebase-messaging.js')
 
 // Your Firebase project configuration.
 const firebaseConfig = {
-  apiKey: "AIzaSyCJbO7BNbwO7_120HFE5g80PyTW1AyeL0Q",
+//  apiKey: "AIzaSyCJbO7BNbwO7_120HFE5g80PyTW1AyeL0Q",
   authDomain: "salrow-aa320.firebaseapp.com",
   projectId: "salrow-aa320",
   storageBucket: "salrow-aa320.firebasestorage.app",
